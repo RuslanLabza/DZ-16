@@ -1,0 +1,16 @@
+.wrapper {
+	overflow: hidden;
+	position: relative;
+}
+
+.container {
+	max-width: 1170px;
+	margin: 0 auto;
+	padding: 25px 15px;
+
+	h1 {
+		border-bottom: 4px solid $light-gray;
+		display: inline-block;
+		margin-bottom: 30px;
+	}
+}
