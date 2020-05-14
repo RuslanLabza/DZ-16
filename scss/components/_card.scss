@@ -1,6 +1,5 @@
 .card {
 	position: relative;
-	margin-bottom: 26px;
 
 	&:hover {
 		.hover-box {
@@ -8,13 +7,9 @@
 		}
 	}
 
-	img {
-		display: block;
-		width: 100%;
-	}
-
 	.hover-box {
 		position: absolute;
+		opacity: 0;
 		top: 0;
 		left: 0;
 		right: 0;
@@ -23,9 +18,16 @@
 		display: flex;
 		flex-direction: column;
 		text-decoration: none;
-		opacity: 0;
 		transition: opacity .3s ease-in-out;
 		text-align: left;
+
+		@include media ('>=phone') {
+			margin: 0 10px;
+		}
+
+		@include media ('>=widescreen') {
+			margin: 0 15px;
+		}
 	}
 
 	.plus {
@@ -45,18 +47,51 @@
 		&::before {
 			width: 18px;
 			height: 3px;
+
+			@include media ('>=tablet') {
+				width: 13px;
+				height: 2px;
+			}
+
+			@include media ('>=widescreen') {
+				width: 20px;
+				height: 4px;
+			}
 		}
 
 		&::after {
 			width: 3px;
 			height: 18px;
+
+			@include media ('>=tablet') {
+				width: 2px;
+				height: 13px;
+			}
+
+			@include media ('>=widescreen') {
+				width: 4px;
+				height: 20px;
+			}
 		}
 	}
 
-	&-title {
+	.card-title {
 		margin: 0;
 		padding: 8px 17px;
-		background-color: $dark-grey;
+		background-color: $dark-gray;
 		color: $white;
+
+		@include media ('>=tablet') {
+			padding: 7px 14px;
+		}
+
+		@include media ('>=widescreen') {
+			padding: 9.5px 20px;
+		}
+	}
+
+	img {
+		display: block;
+		width: 100%;
 	}
 }

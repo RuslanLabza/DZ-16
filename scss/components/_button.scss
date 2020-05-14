@@ -13,8 +13,29 @@
 	text-transform: uppercase;
 	transition: background .3s, color .3s;
 
+	@include media ('>=phone') {
+		margin-top: 26px;
+	}
+
+	@include media ('>=tablet') {
+		margin-top: 30px;
+	}
+
+	@include media ('>=widescreen') {
+		margin-top: 45px;
+	}
+
 	&:hover {
 		color: $gray;
 		background-color: $white;
+		text-decoration: none;
+	}
+}
+
+.button {
+	@include media ('>=tablet') {
+		text-align: center;
+		max-width: 1170px;
+		margin: 0 auto;
 	}
 }
