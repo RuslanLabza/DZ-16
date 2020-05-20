@@ -12,13 +12,17 @@ $column: 12;
 		margin-bottom: 26px;
 
 		@include media ('>=phone') {
-			padding: 0 10px;
-			margin: 10px 0;
+			width: calc(50% - 20px);
+			margin: 10px
+		}
+
+		@include media ('>=tablet') {
+			width: calc(33.33% - 20px);
 		}
 
 		@include media ('>=widescreen') {
-			padding: 0 15px;
-			margin: 15px 0;
+			width: calc(33.33% - 30px);
+			margin: 15px;
 		}
 	}
 }
